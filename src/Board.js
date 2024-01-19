@@ -30,12 +30,28 @@ import "./Board.css";
 function Board({ nrows = 6, ncols = 6 , chanceLightStartsOn = 0.25 }) {
   const [board, setBoard] = useState(createBoard());
 
-  /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
+  /** create a board nrows high/ncols wide, each cell randomly lit or unlit- This is more difficult to win */
   function createBoard() {
     let initialBoard = Array.from({ length: nrows }, () => Array.from({ length: ncols }, () => Math.random() < chanceLightStartsOn));
     // TODO: create array-of-arrays of true/false values
     return initialBoard;
   }
+
+  /** create a board nrows high/ncols wide, each cell randomly lit or unlit- This presents a higher chance of winning */
+  // function generateWinnableBoard() {
+  //   const nrows= 6;
+  //   const ncols= 6;
+  //   const board= Array.from({ length: nrows }, () => Array.from({ length: ncols }, () => Math.random() < 0.5));
+
+  //   for(let i=0; i < nrows; i++) {
+  //     for(let j=0; j< ncols; j++) {
+  //       if((i+j) % 2 === 0) {
+  //         board[i][j] = true;
+  //       }
+  //     }
+  //   }
+  //   return board;
+  // }
 
   
 

@@ -1,3 +1,31 @@
 .App {
   text-align: center;
 }
+ body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a4f99e;
+ }
+
+ header {
+  text-align: center;
+  margin-bottom: 20px;
+ }
+
+ h1 {
+  font-size: 2em;
+  color: #333;
+ }
+
+ p {
+  font-size: 1.2em;
+  color: #666;
+ }
+
+ .GameWrapper {
+  text-align: center;
+ }
